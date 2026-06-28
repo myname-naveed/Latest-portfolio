@@ -771,6 +771,57 @@ footer p {
 .footer-links a:hover {
   color: var(--accent-light);
 }
+/* --- WhatsApp Floating Button --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50px;
+    padding: 18px 22px;
+    font-size: 2.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.whatsapp-float:hover {
+    background-color: #1da851;
+    transform: scale(1.05);
+    color: #fff;
+}
+
+/* --- WhatsApp Button in Contact Section --- */
+.whatsapp-btn {
+    background-color: #25D366;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1da851;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        padding: 14px 18px;
+        font-size: 1.8rem;
+        bottom: 20px;
+        right: 20px;
+    }
+}
 
 /* ============================================
    RESPONSIVE
