@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta name="google-site-verification" content="fTvnfzLO7CRlyLVNzGOnUSx7oJJwUPJWDbaZcPNwXcQ" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Muhammad Naveed | SEO executive | onsite, Remote & Freelance</title>
-    <meta name="description" content="SEO executive with 1+ years experience. I help clinics & any service brands rank #1 on Google. Available for onsite, remote & freelance SEO projects.">
+    <title>Muhammad Naveed – SEO Executive | Remote & Freelance SEO Expert</title>
+    <meta name="description" content="SEO executive helping clinics & service brands get leads through organic search. Available for onsite, remote & freelance SEO projects. 2000+ backlinks built." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
         /* ============================================
-           LUXURY GOLD + DARK ROYAL THEME
+           LUXURY GOLD + DARK ROYAL THEME (UPDATED)
            ============================================ */
         :root {
             --bg-primary: #0a0806;
@@ -149,6 +148,7 @@
             font-size: 1.5rem;
             letter-spacing: 1px;
             color: var(--text-primary);
+            text-decoration: none;
         }
         .logo span {
             color: var(--gold);
@@ -168,6 +168,7 @@
             position: relative;
             letter-spacing: 0.5px;
             text-transform: uppercase;
+            text-decoration: none;
         }
         .nav-links a::after {
             content: '';
@@ -252,48 +253,54 @@
             align-items: center;
         }
 
-        .hero-content .badge {
-            display: inline-block;
-            padding: 6px 20px;
-            border-radius: 100px;
-            background: rgba(212, 168, 83, 0.08);
-            border: 1px solid rgba(212, 168, 83, 0.12);
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: var(--gold-light);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 28px;
-            backdrop-filter: blur(4px);
-        }
-
-        .hero-content h1 {
+        /* Hero Text */
+        .hero-text h1 {
             font-family: var(--font-heading);
-            font-size: 4.5rem;
+            font-size: 4.2rem;
             font-weight: 800;
             line-height: 1.05;
             letter-spacing: -1.5px;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
-        .hero-content h1 .highlight {
+        .hero-text h1 .highlight {
             color: var(--gold);
             font-style: italic;
         }
 
-        .hero-content .subtitle {
-            font-size: 1.15rem;
+        .sub-headline {
+            font-size: 1.1rem;
             color: var(--text-secondary);
-            max-width: 480px;
-            margin-bottom: 36px;
+            max-width: 500px;
+            margin-bottom: 28px;
             line-height: 1.8;
             font-weight: 300;
         }
+        .sub-headline strong {
+            color: var(--gold-light);
+            font-weight: 500;
+        }
 
-        .hero-actions {
+        .trust-badges {
             display: flex;
             flex-wrap: wrap;
             gap: 16px;
-            margin-bottom: 48px;
+            margin-bottom: 32px;
+        }
+        .trust-badges span {
+            background: rgba(212, 168, 83, 0.06);
+            border: 1px solid rgba(212, 168, 83, 0.08);
+            padding: 6px 18px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 32px;
         }
 
         .btn {
@@ -332,36 +339,57 @@
             transform: translateY(-4px);
             box-shadow: 0 8px 30px rgba(212, 168, 83, 0.05);
         }
-
-        .hero-stats {
-            display: flex;
-            gap: 56px;
-            padding-top: 12px;
-            border-top: 1px solid rgba(212, 168, 83, 0.08);
+        .btn-whatsapp {
+            background: #25D366;
+            color: #fff;
         }
-        .hero-stats .stat h3 {
-            font-family: var(--font-heading);
-            font-size: 2rem;
-            font-weight: 700;
+        .btn-whatsapp:hover {
+            background: #1da851;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);
+        }
+
+        .availability-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 24px;
+            background: rgba(212, 168, 83, 0.06);
+            border: 1px solid rgba(212, 168, 83, 0.1);
+            border-radius: 100px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        .status-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #4ade80;
+            border-radius: 50%;
+            animation: dotBlink 2s ease-in-out infinite;
+            box-shadow: 0 0 16px rgba(74, 222, 128, 0.3);
+        }
+        @keyframes dotBlink {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.2;
+            }
+        }
+        .availability-badge strong {
             color: var(--gold-light);
-            letter-spacing: 1px;
-        }
-        .hero-stats .stat p {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            font-weight: 600;
         }
 
-        /* ===== HERO VISUAL ===== */
+        /* Hero Visual */
         .hero-visual {
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
         }
-
         .hero-avatar {
             width: 400px;
             height: 400px;
@@ -399,7 +427,6 @@
                 transform: rotate(360deg);
             }
         }
-
         .hero-avatar .avatar-img {
             width: 100%;
             height: 100%;
@@ -411,6 +438,7 @@
             z-index: 1;
         }
 
+        /* Floating Badges */
         .floating-badge {
             position: absolute;
             background: rgba(26, 22, 18, 0.9);
@@ -428,22 +456,8 @@
             gap: 12px;
             white-space: nowrap;
         }
-        .floating-badge .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #4ade80;
-            animation: dotBlink 2s ease-in-out infinite;
-            box-shadow: 0 0 16px rgba(74, 222, 128, 0.3);
-        }
-        @keyframes dotBlink {
-            0%,
-            100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.2;
-            }
+        .floating-badge .gold-icon {
+            color: var(--gold);
         }
         .floating-badge--1 {
             top: 6%;
@@ -454,9 +468,6 @@
             bottom: 10%;
             left: -8%;
             animation-delay: -3s;
-        }
-        .floating-badge .gold-icon {
-            color: var(--gold);
         }
         @keyframes floatBadge {
             0%,
@@ -707,6 +718,7 @@
             color: var(--text-secondary);
             transition: var(--transition);
             font-weight: 300;
+            text-decoration: none;
         }
         .contact-item a:hover {
             color: var(--gold-light);
@@ -715,6 +727,7 @@
             display: flex;
             gap: 14px;
             margin-top: 28px;
+            flex-wrap: wrap;
         }
         .social-links a {
             padding: 10px 24px;
@@ -725,6 +738,7 @@
             font-size: 0.85rem;
             color: var(--text-secondary);
             backdrop-filter: blur(8px);
+            text-decoration: none;
         }
         .social-links a:hover {
             border-color: rgba(212, 168, 83, 0.2);
@@ -768,6 +782,52 @@
             align-self: flex-start;
         }
 
+        .whatsapp-btn {
+            background: #25D366;
+            color: #fff !important;
+            padding: 12px 24px;
+            border-radius: 100px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-family: var(--font-body);
+        }
+        .whatsapp-btn:hover {
+            background: #1da851;
+            transform: translateY(-2px);
+            color: #fff !important;
+        }
+
+        /* ===== WHATSAPP FLOATING ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background: #25D366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 8px 40px rgba(37, 211, 102, 0.4);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-4px);
+            box-shadow: 0 12px 60px rgba(37, 211, 102, 0.5);
+            color: #fff;
+        }
+
         /* ===== FOOTER ===== */
         footer {
             border-top: 1px solid rgba(212, 168, 83, 0.06);
@@ -799,6 +859,7 @@
             font-size: 0.8rem;
             transition: var(--transition);
             font-weight: 300;
+            text-decoration: none;
         }
         .footer-links a:hover {
             color: var(--gold-light);
@@ -810,13 +871,16 @@
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            .hero-content .subtitle {
-                margin: 0 auto 32px;
+            .sub-headline {
+                margin: 0 auto 28px;
             }
-            .hero-actions {
+            .trust-badges {
                 justify-content: center;
             }
-            .hero-stats {
+            .hero-buttons {
+                justify-content: center;
+            }
+            .availability-badge {
                 justify-content: center;
             }
             .hero-avatar {
@@ -851,11 +915,14 @@
                 display: flex;
                 justify-content: center;
             }
-            .hero-content h1 {
-                font-size: 3.5rem;
+            .hero-text h1 {
+                font-size: 3.2rem;
             }
             .section-title {
                 font-size: 2.5rem;
+            }
+            .hero-visual {
+                grid-row: 1;
             }
         }
 
@@ -884,18 +951,15 @@
             .hamburger {
                 display: flex;
             }
-            .hero-content h1 {
-                font-size: 2.8rem;
+            .hero-text h1 {
+                font-size: 2.5rem;
             }
             .section-title {
                 font-size: 2rem;
             }
             .hero-avatar {
-                width: 240px;
-                height: 240px;
-            }
-            .hero-stats {
-                gap: 28px;
+                width: 220px;
+                height: 220px;
             }
             .floating-badge {
                 font-size: 0.7rem;
@@ -912,25 +976,35 @@
             .about-details {
                 grid-template-columns: 1fr;
             }
+            .hero-grid {
+                gap: 40px;
+            }
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.6rem;
+                bottom: 20px;
+                right: 20px;
+            }
         }
     </style>
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Muhammad Naveed",
-  "jobTitle": "SEO Executive",
-  "url": "https://myname-naveed.github.io/Latest-portfolio/",
-  "email": "hafizmuhammadnaveedo6@gmail.com",
-  "telephone": "+923094669054",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Lahore",
-    "addressCountry": "PK"
-  },
-  "knowsAbout": ["Search Engine Optimization", "On-Page SEO", "Off-Page SEO", "Healthcare SEO"]
-}
-</script>
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Muhammad Naveed",
+            "jobTitle": "SEO Executive",
+            "url": "https://myname-naveed.github.io/Latest-portfolio/",
+            "email": "hafizmuhammadnaveedo6@gmail.com",
+            "telephone": "+923094669054",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Lahore",
+                "addressCountry": "PK"
+            },
+            "knowsAbout": ["Search Engine Optimization", "On-Page SEO", "Off-Page SEO", "Healthcare SEO", " Technical SEO", "Local SEO"]
+        }
+    </script>
 </head>
 <body>
     <!-- Glow Orbs -->
@@ -955,51 +1029,54 @@
         </div>
     </nav>
 
-
     <!-- ===== HERO SECTION ===== -->
-<section class="hero">
-    <div class="container hero-grid">
-        <div class="hero-text">
-            <!-- ✅ New Heading: Directly targeting SEO clients -->
-            <h1>
-                <span class="highlight">SEO Executive</span> for Healthcare &amp; Service Brands
-            </h1>
-            <p class="sub-headline">
-                I help businesses <strong>rank #1 on Google</strong> and get <strong> traffic, qualified leads</strong> through 
-                On‑Page, Off‑Page, and Technical SEO. I am Available for <strong>onsite, remote, or freelance</strong> projects.
-            </p>
-            
-            <!-- ✅ Trust Badges -->
-            <div class="trust-badges">
-                <span>✅ 5+ Healthcare Projects</span>
-                <span>✅ 2000+ Backlinks Built</span>
-                <span>✅ 40% Avg. Traffic Growth</span>
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>
+                    <span class="highlight">SEO Executive</span> for Healthcare &amp; Service Brands
+                </h1>
+                <p class="sub-headline">
+                    I help businesses <strong>rank #1 on Google</strong> and get <strong>organic traffic and appear in competitive search</strong> through
+                    search engine optimization. Available for any <strong>onsite, remote, or freelance</strong> projects.
+                </p>
+
+                <div class="trust-badges">
+                    <span>✅ 5+ Healthcare Projects</span>
+                    <span>✅ 2000+ Backlinks Built</span>
+                    <span>✅ 40% Avg. Traffic Growth</span>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-briefcase"></i> Hire Me for SEO Work
+                    </a>
+                    <a href="https://wa.me/923094669054?text=Hi%20Naveed%2C%20I%20need%20an%20SEO%20expert%20for%20my%20website.%20Can%20we%20discuss%20your%20services%3F"
+                       target="_blank"
+                       class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Quick Chat on WhatsApp
+                    </a>
+                </div>
+
+                <div class="availability-badge">
+                    <span class="status-dot"></span>
+                    Open to: <strong>Onsite · Remote · Freelance</strong> — Any SEO Role
+                </div>
             </div>
 
-            <!-- ✅ New CTA Buttons -->
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">
-                    <i class="fas fa-briefcase"></i> Hire Me for SEO Work
-                </a>
-                <a href="https://wa.me/923094669054?text=Hi%20Naveed%2C%20I%20need%20an%20SEO%20expert%20for%20my%20website.%20Can%20we%20discuss%20your%20services%3F" 
-                   target="_blank" 
-                   class="btn btn-outline">
-                    <i class="fab fa-whatsapp"></i> Quick Chat on WhatsApp
-                </a>
-            </div>
-
-            <!-- ✅ "Open to Work" Badge -->
-            <div class="availability-badge">
-                <span class="status-dot"></span> 
-                Open to: <strong>Onsite · Remote · Freelance</strong> — Any SEO Role
+            <div class="hero-visual">
+                <div class="hero-avatar">
+                    <img src="myphoto.jpeg" alt="Muhammad Naveed - SEO Executive" class="avatar-img" />
+                </div>
+                <div class="floating-badge floating-badge--1">
+                    <i class="fas fa-chart-line gold-icon"></i> 40% Growth
+                </div>
+                <div class="floating-badge floating-badge--2">
+                    <i class="fas fa-link gold-icon"></i> 2000+ Backlinks
+                </div>
             </div>
         </div>
-
-        <div class="hero-icon">
-            <i class="fas fa-chart-line"></i>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- ===== ABOUT ===== -->
     <section id="about">
@@ -1129,11 +1206,6 @@
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <a href="mailto:hafizmuhammadnaveedo6@gmail.com">hafizmuhammadnaveedo6@gmail.com</a>
-                        <a href="https://wa.me/923094669054?text=Hi%20Naveed%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20connect%20with%20you." 
-       class="btn whatsapp-btn" 
-       target="_blank">
-        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-    </a>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
@@ -1143,8 +1215,16 @@
                         <i class="fas fa-map-pin"></i>
                         <span>Lahore, Pakistan</span>
                     </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/923094669054?text=Hi%20Naveed%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20connect%20with%20you."
+                           target="_blank"
+                           class="whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/hafiz-muhammad-naveed-410291384" ><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/hafiz-muhammad-naveed-410291384" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                         <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
@@ -1164,11 +1244,19 @@
         <div class="container">
             <p>&copy; 2026 <span class="gold-text">Muhammad Naveed</span> · SEO Executive</p>
             <div class="footer-links">
-                <a href="https://www.linkedin.com/in/hafiz-muhammad-naveed-410291384" ><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.linkedin.com/in/hafiz-muhammad-naveed-410291384" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <a href="mailto:hafizmuhammadnaveedo6@gmail.com"><i class="fas fa-envelope"></i> Email</a>
             </div>
         </div>
     </footer>
+
+    <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+    <a href="https://wa.me/923094669054?text=Hi%20Naveed%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20connect%20with%20you."
+       class="whatsapp-float"
+       target="_blank"
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
@@ -1212,12 +1300,5 @@
             });
         });
     </script>
-    <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/923094669054?text=Hi%20Naveed%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20connect%20with%20you." 
-   class="whatsapp-float" 
-   target="_blank" 
-   aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-</a>
 </body>
 </html>
