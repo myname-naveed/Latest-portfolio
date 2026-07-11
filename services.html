@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services · Muhammad Naveed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        .services-full-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .service-full-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border-radius: var(--radius);
+            padding: 32px 28px;
+            border: 1px solid rgba(201, 168, 76, 0.04);
+            transition: var(--transition);
+        }
+        .service-full-card:hover {
+            border-color: rgba(201, 168, 76, 0.12);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        .service-full-card .icon {
+            font-size: 2.4rem;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+        .service-full-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+        .service-full-card p {
+            color: var(--text-secondary);
+            font-weight: 300;
+            font-size: 0.9rem;
+        }
+        .service-full-card ul {
+            padding-left: 18px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 8px;
+            font-weight: 300;
+        }
+        .service-full-card ul li {
+            margin-bottom: 2px;
+        }
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .deliverable-item {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border-radius: 12px;
+            padding: 14px 18px;
+            border: 1px solid rgba(201, 168, 76, 0.04);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            transition: var(--transition);
+        }
+        .deliverable-item:hover {
+            border-color: rgba(201, 168, 76, 0.08);
+            color: var(--text-primary);
+            transform: translateX(4px);
+        }
+        .deliverable-item i {
+            color: var(--gold);
+            font-size: 1rem;
+        }
+        @media (max-width: 992px) {
+            .services-full-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .deliverables-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .services-full-grid {
+                grid-template-columns: 1fr;
+            }
+            .deliverables-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">M<span>Naveed</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>My <span class="gold">SEO Services</span></h1>
+            <p>Complete SEO solutions designed to grow your organic traffic, rankings, and revenue.</p>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="services-full-grid">
+                <div class="service-full-card">
+                    <div class="icon"><i class="fas fa-code"></i></div>
+                    <h3>Technical SEO</h3>
+                    <p>I optimize your website's backend to ensure search engines can crawl, index, and rank your pages efficiently.</p>
+                    <ul>
+                        <li>Site speed & Core Web Vitals</li>
+                        <li>Schema markup & structured data</li>
+                        <li>Crawl budget optimization</li>
+                        <li>XML sitemaps & robots.txt</li>
+                    </ul>
+                </div>
+                <div class="service-full-card">
+                    <div class="icon"><i class="fas fa-pen-fancy"></i></div>
+                    <h3>On‑Page SEO</h3>
+                    <p>I optimize every page on your site to rank higher and deliver a better user experience.</p>
+                    <ul>
+                        <li>Meta titles, descriptions, and tags</li>
+                        <li>Keyword research & content mapping</li>
+                        <li>Internal linking strategy</li>
+                        <li>Content optimization & briefs</li>
+                    </ul>
+                </div>
+                <div class="service-full-card">
+                    <div class="icon"><i class="fas fa-link"></i></div>
+                    <h3>Off‑Page SEO</h3>
+                    <p>I build high-quality backlinks and authority signals to boost your domain trust and search rankings.</p>
+                    <ul>
+                        <li>Link building & guest posting</li>
+                        <li>Business citations & directories</li>
+                        <li>Web 2.0 & profile backlinks</li>
+                        <li>Competitor link analysis</li>
+                    </ul>
+                </div>
+                <div class="service-full-card">
+                    <div class="icon"><i class="fas fa-map-pin"></i></div>
+                    <h3>Local SEO</h3>
+                    <p>I help local businesses dominate their area with targeted local SEO strategies.</p>
+                    <ul>
+                        <li>Google Business Profile optimization</li>
+                        <li>Local citations & NAP consistency</li>
+                        <li>Review management</li>
+                        <li>Local keyword targeting</li>
+                    </ul>
+                </div>
+                <div class="service-full-card">
+                    <div class="icon"><i class="fas fa-search"></i></div>
+                    <h3>SEO Audit</h3>
+                    <p>I perform comprehensive SEO audits to identify opportunities and issues across your entire site.</p>
+                    <ul>
+                        <li>Technical SEO audit</li>
+                        <li>On‑page & content audit</li>
+                        <li>Backlink profile analysis</li>
+                        <li>Competitor & gap analysis</li>
+                    </ul>
+                </div>
+                <div class="service-full-card">
+                    <div class="icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Content Strategy</h3>
+                    <p>I create SEO-driven content strategies that attract, engage, and convert your target audience.</p>
+                    <ul>
+                        <li>Content gap analysis</li>
+                        <li>Topic cluster planning</li>
+                        <li>SEO-friendly content briefs</li>
+                        <li>Optimization of existing content</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Deliverables -->
+    <section class="section-alt">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">✦ What You Get</span>
+                <h2 class="section-title">My SEO <span class="gold">Deliverables</span></h2>
+                <p class="section-desc" style="max-width:700px;">When you hire me, here's exactly what you can expect.</p>
+            </div>
+            <div class="deliverables-grid">
+                <div class="deliverable-item"><i class="fas fa-check-circle"></i> Comprehensive SEO Audit</div>
+                <div class="deliverable-item"><i class="fas fa-check-circle"></i> Keyword Research & Content Mapping</div>
+                <div class="deliverable-item"><i class="fas fa-check-circle"></i> On‑Page SEO Optimization</div>
+                <div class="deliverable-item"><i class="fas fa-check-circle"></i> Technical SEO Fixes</div>
+                <div class="deliverable-item"><i class="fas fa-check-circle"></i> Local SEO & GMB Optimization</div>
+                <div class="deliverable-item"><i class="fas fa-check-circle"></i> Competitor Analysis</div>
+                <div class="deliverable-item"><i class="fas fa-check-circle"></i> Content Briefs & Optimization</div>
+                <div class="deliverable-item"><i class="fas fa-check-circle"></i> Internal Linking Strategy</div>
+                <div class="deliverable-item"><i class="fas fa-check-circle"></i> Backlink & Off‑Page Strategy</div>
+                <div class="deliverable-item"><i class="fas fa-check-circle"></i> Monthly Performance Reporting</div>
+                <div class="deliverable-item"><i class="fas fa-check-circle"></i> AI Search (AEO/GEO) Optimization</div>
+                <div class="deliverable-item"><i class="fas fa-check-circle"></i> Ongoing SEO Consulting</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 <span class="gold-text">Muhammad Naveed</span> · SEO Specialist</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/hafiz-muhammad-naveed-410291384" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:hafizmuhammadnaveedo6@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
