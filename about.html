@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About · Muhammad Naveed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        .about-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-text p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-weight: 300;
+        }
+        .about-text p strong {
+            color: var(--gold-light);
+            font-weight: 500;
+        }
+        .about-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .about-details div {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 1px solid rgba(201, 168, 76, 0.04);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+        .about-details div:hover {
+            border-color: rgba(201, 168, 76, 0.08);
+        }
+        .about-details div i {
+            color: var(--gold);
+            margin-right: 8px;
+        }
+        .about-details div strong {
+            color: var(--text-primary);
+        }
+        .about-avatar {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            padding: 6px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            box-shadow: 0 30px 80px rgba(201, 168, 76, 0.08);
+        }
+        .about-avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--bg-primary);
+        }
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 8px;
+        }
+        .skill-tag {
+            padding: 6px 18px;
+            border-radius: 100px;
+            background: rgba(201, 168, 76, 0.04);
+            border: 1px solid rgba(201, 168, 76, 0.06);
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            transition: var(--transition);
+        }
+        .skill-tag:hover {
+            background: rgba(201, 168, 76, 0.06);
+            color: var(--gold-light);
+            border-color: rgba(201, 168, 76, 0.12);
+            transform: translateY(-2px);
+        }
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 16px;
+            max-width: 700px;
+            margin: 12px auto 0;
+        }
+        .tool-item {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border-radius: 12px;
+            padding: 14px;
+            text-align: center;
+            border: 1px solid rgba(201, 168, 76, 0.04);
+            transition: var(--transition);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        .tool-item:hover {
+            border-color: rgba(201, 168, 76, 0.12);
+            transform: translateY(-4px);
+            color: var(--gold-light);
+        }
+        .tool-item i {
+            font-size: 1.6rem;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 4px;
+        }
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .about-details {
+                grid-template-columns: 1fr;
+            }
+            .about-avatar {
+                width: 240px;
+                height: 240px;
+            }
+            .tools-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">M<span>Naveed</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>About <span class="gold">Me</span></h1>
+            <p>SEO Specialist with a passion for data‑driven growth and measurable results.</p>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I'm <strong>Muhammad Naveed</strong>, an SEO specialist based in Lahore, Pakistan. I hold a Bachelor's degree in Computer Science from Superior University (2022–2026) — which gives me a unique edge in understanding the technical side of SEO.</p>
+                    <p>My journey began with a deep curiosity about how search engines work. Over the past 3+ years, I've worked with clients across healthcare and local business niches, delivering strategies that combine <strong>Technical SEO, On‑Page, Off‑Page, and Local SEO</strong>.</p>
+                    <p>My approach is simple: I focus on <strong>data, strategy, and execution</strong>. Every decision is backed by analytics, and every campaign is designed to deliver organic growth, qualified traffic, and conversions.</p>
+                    <p>I'm currently available for <strong>freelance SEO projects, remote contracts, and agency collaborations</strong> worldwide.</p>
+
+                    <div class="about-details">
+                        <div><i class="fas fa-map-pin"></i> <strong>Location</strong> Lahore, Pakistan</div>
+                        <div><i class="fas fa-graduation-cap"></i> <strong>Education</strong> BS Computer Science</div>
+                        <div><i class="fas fa-language"></i> <strong>Languages</strong> Punjabi, English, Urdu</div>
+                        <div><i class="fas fa-briefcase"></i> <strong>Experience</strong> 3+ Years</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="about-avatar">
+                        <img src="myphoto.jpg" alt="Muhammad Naveed" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section-alt">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">✦ Expertise</span>
+                <h2 class="section-title">My <span class="gold">Skills</span></h2>
+            </div>
+            <div class="skills-tags" style="justify-content:center;max-width:800px;margin:0 auto;">
+                <span class="skill-tag">Technical SEO</span>
+                <span class="skill-tag">On‑Page SEO</span>
+                <span class="skill-tag">Off‑Page SEO</span>
+                <span class="skill-tag">Local SEO</span>
+                <span class="skill-tag">SEO Audit</span>
+                <span class="skill-tag">Keyword Research</span>
+                <span class="skill-tag">Content Optimization</span>
+                <span class="skill-tag">Internal Linking</span>
+                <span class="skill-tag">Schema Markup</span>
+                <span class="skill-tag">Google Search Console</span>
+                <span class="skill-tag">Google Analytics 4</span>
+                <span class="skill-tag">Core Web Vitals</span>
+                <span class="skill-tag">Semrush</span>
+                <span class="skill-tag">Ahrefs</span>
+                <span class="skill-tag">Screaming Frog</span>
+                <span class="skill-tag">WordPress</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools -->
+    <section>
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">✦ Toolkit</span>
+                <h2 class="section-title">SEO <span class="gold">Tools</span> I Use</h2>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-item"><i class="fab fa-google"></i>GSC</div>
+                <div class="tool-item"><i class="fab fa-google"></i>GA4</div>
+                <div class="tool-item"><i class="fas fa-chart-line"></i>Semrush</div>
+                <div class="tool-item"><i class="fas fa-link"></i>Ahrefs</div>
+                <div class="tool-item"><i class="fas fa-frog"></i>Screaming Frog</div>
+                <div class="tool-item"><i class="fas fa-robot"></i>ChatGPT</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 <span class="gold-text">Muhammad Naveed</span> · SEO Specialist</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/hafiz-muhammad-naveed-410291384" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:hafizmuhammadnaveedo6@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
