@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Studies · Muhammad Naveed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        .case-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+        .case-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border-radius: var(--radius);
+            padding: 32px;
+            border: 1px solid rgba(201, 168, 76, 0.04);
+            transition: var(--transition);
+        }
+        .case-card:hover {
+            border-color: rgba(201, 168, 76, 0.12);
+            transform: translateY(-6px);
+            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
+        }
+        .case-card .case-tag {
+            display: inline-block;
+            padding: 2px 14px;
+            border-radius: 100px;
+            background: rgba(201, 168, 76, 0.06);
+            border: 1px solid rgba(201, 168, 76, 0.08);
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+        .case-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 2px;
+        }
+        .case-card .case-sub {
+            color: var(--gold-light);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        .case-card .case-section {
+            margin-bottom: 10px;
+        }
+        .case-card .case-section strong {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .case-card .case-section p,
+        .case-card .case-section li {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+        .case-card ul {
+            padding-left: 18px;
+            color: var(--text-secondary);
+        }
+        .case-card ul li {
+            margin-bottom: 2px;
+        }
+        .case-card .case-result {
+            margin-top: 14px;
+            padding: 14px 18px;
+            background: rgba(201, 168, 76, 0.04);
+            border-radius: 12px;
+            border-left: 3px solid var(--gold);
+        }
+        .case-card .case-result strong {
+            color: var(--gold-light);
+        }
+        @media (max-width: 992px) {
+            .case-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">M<span>Naveed</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="case-studies.html" class="active">Case Studies</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Case <span class="gold">Studies</span></h1>
+            <p>Real SEO campaigns with real results. Every project includes challenges, strategies, and proof.</p>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="case-grid">
+
+                <!-- Case Study 1 -->
+                <div class="case-card">
+                    <span class="case-tag">🏥 Healthcare</span>
+                    <h3>Sahara West Urgent Care</h3>
+                    <div class="case-sub">On‑Page + Off‑Page SEO Campaign</div>
+
+                    <div class="case-section">
+                        <strong>Challenge</strong>
+                        <p>The clinic had low visibility for urgent care keywords and struggled to compete with larger hospitals.</p>
+                    </div>
+
+                    <div class="case-section">
+                        <strong>Strategy</strong>
+                        <ul>
+                            <li>Optimized meta titles, descriptions, and heading structure</li>
+                            <li>Built high-quality backlinks via citations, directories, and guest posts</li>
+                            <li>Implemented schema markup for local healthcare</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <strong>Implementation</strong>
+                        <ul>
+                            <li>30+ pages optimized with targeted keywords</li>
+                            <li>15+ high-authority backlinks from healthcare directories</li>
+                            <li>5 guest posts on relevant medical blogs</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-result">
+                        <strong>📈 Results:</strong> Top 10 rankings for 8 target keywords · 45% increase in organic traffic · Consistent GSC growth
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="case-card">
+                    <span class="case-tag">🧠 Healthcare</span>
+                    <h3>Cleveland Psychiatry Associates</h3>
+                    <div class="case-sub">Off‑Page SEO &amp; Authority Building</div>
+
+                    <div class="case-section">
+                        <strong>Challenge</strong>
+                        <p>The psychiatry practice needed to build online authority and attract more patients through organic search.</p>
+                    </div>
+
+                    <div class="case-section">
+                        <strong>Strategy</strong>
+                        <ul>
+                            <li>Built backlinks through profile creation and business listings</li>
+                            <li>Leveraged Web 2.0 properties for authority signals</li>
+                            <li>Performed competitor backlink research to identify opportunities</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <strong>Implementation</strong>
+                        <ul>
+                            <li>50+ high-quality backlinks from relevant sources</li>
+                            <li>20+ niche-relevant directory submissions</li>
+                            <li>Continuous monitoring and adjustment of link profile</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-result">
+                        <strong>📈 Results:</strong> Domain authority increased from 18 to 28 · Top 5 rankings for high-intent keywords
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="case-card">
+                    <span class="case-tag">💚 Health &amp; Wellness</span>
+                    <h3>Serenity Choice Health</h3>
+                    <div class="case-sub">Content &amp; On‑Page Optimization</div>
+
+                    <div class="case-section">
+                        <strong>Challenge</strong>
+                        <p>Low engagement and poor keyword visibility despite having good content on the site.</p>
+                    </div>
+
+                    <div class="case-section">
+                        <strong>Strategy</strong>
+                        <ul>
+                            <li>Optimized website content and metadata</li>
+                            <li>Restructured page hierarchy for better UX</li>
+                            <li>Implemented internal linking improvements</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <strong>Implementation</strong>
+                        <ul>
+                            <li>20+ pages optimized with improved content and keyword targeting</li>
+                            <li>5 new content briefs created for high-value topics</li>
+                            <li>Internal linking architecture redesigned</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-result">
+                        <strong>📈 Results:</strong> 35% increase in organic sessions · Improved page engagement metrics
+                    </div>
+                </div>
+
+                <!-- Case Study 4 -->
+                <div class="case-card">
+                    <span class="case-tag">🛠️ SEO Tool</span>
+                    <h3>RankmdPro</h3>
+                    <div class="case-sub">Keyword Research &amp; Content Strategy</div>
+
+                    <div class="case-section">
+                        <strong>Challenge</strong>
+                        <p>The SEO tool website needed to rank for competitive keyword terms and attract qualified leads.</p>
+                    </div>
+
+                    <div class="case-section">
+                        <strong>Strategy</strong>
+                        <ul>
+                            <li>Comprehensive keyword research for SEO-related topics</li>
+                            <li>Optimized meta titles, descriptions, and heading structure</li>
+                            <li>Enhanced internal linking and content relevance</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <strong>Implementation</strong>
+                        <ul>
+                            <li>15 high-value keywords targeted</li>
+                            <li>10 pages optimized with SEO-friendly content</li>
+                            <li>Topic cluster strategy implemented</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-result">
+                        <strong>📈 Results:</strong> First-page rankings for 5 target keywords · 50% increase in organic impressions
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 <span class="gold-text">Muhammad Naveed</span> · SEO Specialist</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/hafiz-muhammad-naveed-410291384" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:hafizmuhammadnaveedo6@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
