@@ -3,366 +3,165 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Muhammad Naveed – SEO Specialist | Healthcare SEO Expert</title>
-    <meta name="description" content="SEO Executive with experience managing SEO campaigns for multiple US healthcare websites. Skilled in On-Page, Technical, Off-Page, Local SEO, and Google Business Profile optimization. Experienced with GSC, GA4, SEMrush, Ahrefs, Screaming Frog." />
-    <meta name="keywords" content="SEO Specialist, SEO Executive, Technical SEO, Local SEO, Keyword Research, Competitor Analysis, Link Building, Google Analytics 4, Google Search Console, Screaming Frog, Ahrefs, SEMrush, Rank Math, WordPress, Local Citations, Google Business Profile, Core Web Vitals, Site Audit" />
+    <title>Muhammad Naveed · SEO Specialist</title>
+    <meta name="description" content="SEO Specialist offering Technical SEO, On-Page SEO, Off-Page SEO, Local SEO, and Content Strategy." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <style>
-        /* ============================================
-           CLEAN WHITE + EMERALD GREEN THEME
-           Healthcare SEO Professional (UPDATED)
-           ============================================ */
-        :root {
-            --bg-primary: #ffffff;
-            --bg-secondary: #f8fafc;
-            --bg-card: #ffffff;
-            --text-primary: #0f172a;
-            --text-secondary: #475569;
-            --text-muted: #94a3b8;
-            --green: #0d9488;
-            --green-light: #14b8a6;
-            --green-dark: #0f766e;
-            --green-glow: rgba(13, 148, 136, 0.15);
-            --green-bg: rgba(13, 148, 136, 0.04);
-            --border-color: #e2e8f0;
-            --radius: 20px;
-            --shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
-            --shadow-hover: 0 30px 80px rgba(13, 148, 136, 0.12);
-            --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            --font-heading: 'Space Grotesk', sans-serif;
-            --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-        }
-
-        body {
-            font-family: var(--font-body);
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--bg-secondary);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--green);
-            border-radius: 10px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* ===== NAVBAR ===== */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-            padding: 14px 0;
-            transition: var(--transition);
-        }
-        .navbar.scrolled {
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-        }
-        .navbar .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            font-family: var(--font-heading);
-            font-weight: 700;
-            font-size: 1.4rem;
-            color: var(--text-primary);
-            text-decoration: none;
-        }
-        .logo span {
-            color: var(--green);
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 36px;
-            list-style: none;
-        }
-        .nav-links a {
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            transition: var(--transition);
-            text-decoration: none;
-            position: relative;
-        }
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--green);
-            transition: var(--transition);
-        }
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--green);
-        }
-        .nav-links a:hover::after,
-        .nav-links a.active::after {
-            width: 100%;
-        }
-
-        .nav-cta {
-            padding: 10px 28px;
-            background: var(--green);
-            color: #fff !important;
-            border-radius: 100px;
-            font-weight: 600;
-            font-size: 0.8rem;
-            transition: var(--transition);
-        }
-        .nav-cta::after {
-            display: none !important;
-        }
-        .nav-cta:hover {
-            background: var(--green-dark);
-            transform: translateY(-2px);
-            color: #fff !important;
-            box-shadow: 0 8px 30px var(--green-glow);
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 4px;
-        }
-        .hamburger span {
-            display: block;
-            width: 28px;
-            height: 2px;
-            background: var(--text-primary);
-            border-radius: 2px;
-            transition: var(--transition);
-        }
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-
-        /* ===== HERO ===== */
+        /* Home page specific */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             padding: 140px 0 80px;
-            background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 50%, #f8fafc 100%);
             position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -40%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(13, 148, 136, 0.06), transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
+            z-index: 1;
         }
         .hero-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
             align-items: center;
+        }
+        .hero-content .badge {
+            display: inline-block;
+            padding: 6px 20px;
+            border-radius: 100px;
+            background: rgba(201, 168, 76, 0.06);
+            border: 1px solid rgba(201, 168, 76, 0.1);
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+        }
+        .hero-content h1 {
+            font-family: var(--font-heading);
+            font-size: 4.2rem;
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -1.5px;
+            margin-bottom: 16px;
+        }
+        .hero-content h1 .highlight {
+            color: var(--gold);
+            font-style: italic;
+        }
+        .hero-content .subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 520px;
+            margin-bottom: 32px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 56px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(201, 168, 76, 0.06);
+        }
+        .hero-stats .stat h3 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            letter-spacing: 1px;
+        }
+        .hero-stats .stat p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .hero-avatar {
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            padding: 8px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark), var(--gold-light), var(--gold));
+            background-size: 300% 300%;
+            animation: gradientSpin 6s ease-in-out infinite;
+            box-shadow: 0 40px 100px rgba(201, 168, 76, 0.1);
+            position: relative;
+        }
+        .hero-avatar::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 50%;
+            padding: 2px;
+            background: conic-gradient(from 0deg, var(--gold), transparent, var(--gold), transparent);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: spin 15s linear infinite;
+        }
+        @keyframes gradientSpin {
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .hero-avatar .avatar-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--bg-primary);
+            display: block;
             position: relative;
             z-index: 1;
         }
-
-        .hero-text .badge {
-            display: inline-block;
-            padding: 6px 18px;
-            border-radius: 100px;
-            background: var(--green-bg);
-            border: 1px solid rgba(13, 148, 136, 0.1);
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--green);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-        }
-
-        .hero-text h1 {
-            font-family: var(--font-heading);
-            font-size: 4rem;
-            font-weight: 700;
-            line-height: 1.08;
-            letter-spacing: -1px;
-            margin-bottom: 16px;
-        }
-        .hero-text h1 .highlight {
-            color: var(--green);
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: relative;
         }
-        .hero-text h1 .highlight::after {
-            content: '';
+        .floating-badge {
             position: absolute;
-            bottom: 2px;
-            left: 0;
-            right: 0;
-            height: 8px;
-            background: rgba(13, 148, 136, 0.15);
-            border-radius: 4px;
-            z-index: -1;
-        }
-
-        .hero-text .subtitle {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            max-width: 520px;
-            margin-bottom: 28px;
-            line-height: 1.8;
-        }
-        .hero-text .subtitle strong {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        .trust-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 32px;
-        }
-        .trust-badges span {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            padding: 6px 16px;
-            border-radius: 100px;
+            background: rgba(22, 19, 30, 0.9);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(201, 168, 76, 0.1);
+            border-radius: 16px;
+            padding: 12px 20px;
             font-size: 0.8rem;
-            color: var(--text-secondary);
             font-weight: 500;
+            color: var(--text-secondary);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            animation: floatBadge 8s ease-in-out infinite;
             display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .trust-badges span i {
-            color: var(--green);
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-bottom: 32px;
-        }
-
-        .btn {
-            display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 14px 34px;
-            border-radius: 100px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            font-family: var(--font-body);
-            text-decoration: none;
+            white-space: nowrap;
         }
-        .btn-primary {
-            background: var(--green);
-            color: #fff;
-            box-shadow: 0 4px 24px var(--green-glow);
-        }
-        .btn-primary:hover {
-            background: var(--green-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px var(--green-glow);
-        }
-        .btn-outline {
-            background: transparent;
-            color: var(--text-primary);
-            border: 1.5px solid var(--border-color);
-        }
-        .btn-outline:hover {
-            border-color: var(--green);
-            color: var(--green);
-            transform: translateY(-3px);
-        }
-        .btn-whatsapp {
-            background: #25D366;
-            color: #fff;
-        }
-        .btn-whatsapp:hover {
-            background: #1da851;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);
-        }
-        .btn-download {
-            background: #0f172a;
-            color: #fff;
-        }
-        .btn-download:hover {
-            background: #1e293b;
-            transform: translateY(-3px);
-        }
-
-        .availability-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 10px 22px;
-            background: var(--green-bg);
-            border: 1px solid rgba(13, 148, 136, 0.1);
-            border-radius: 100px;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-        .status-dot {
-            display: inline-block;
+        .floating-badge .dot {
             width: 8px;
             height: 8px;
-            background: #22c55e;
             border-radius: 50%;
+            background: #4ade80;
             animation: dotBlink 2s ease-in-out infinite;
+            box-shadow: 0 0 16px rgba(74, 222, 128, 0.3);
         }
         @keyframes dotBlink {
             0%,
@@ -373,64 +172,18 @@
                 opacity: 0.2;
             }
         }
-        .availability-badge strong {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        /* Hero Visual */
-        .hero-visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-        .hero-avatar {
-            width: 380px;
-            height: 380px;
-            border-radius: 50%;
-            padding: 6px;
-            background: linear-gradient(135deg, var(--green), var(--green-light), var(--green-dark));
-            box-shadow: 0 40px 80px rgba(13, 148, 136, 0.15);
-            position: relative;
-        }
-        .hero-avatar .avatar-img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #fff;
-            display: block;
-        }
-
-        .floating-badge {
-            position: absolute;
-            background: #fff;
-            border-radius: 16px;
-            padding: 12px 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            animation: floatBadge 6s ease-in-out infinite;
-            border: 1px solid rgba(0, 0, 0, 0.04);
-        }
-        .floating-badge .green-icon {
-            color: var(--green);
-            font-size: 1.1rem;
-        }
         .floating-badge--1 {
-            top: 8%;
+            top: 4%;
             right: -4%;
             animation-delay: 0s;
         }
         .floating-badge--2 {
-            bottom: 12%;
-            left: -8%;
-            animation-delay: -2.5s;
+            bottom: 8%;
+            left: -6%;
+            animation-delay: -3s;
+        }
+        .floating-badge .gold-icon {
+            color: var(--gold);
         }
         @keyframes floatBadge {
             0%,
@@ -442,571 +195,107 @@
             }
         }
 
-        /* ===== SECTION COMMON ===== */
-        section {
-            padding: 90px 0;
+        /* Home Services Preview */
+        .services-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
         }
-
-        .section-label {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--green);
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-        .section-title {
-            font-family: var(--font-heading);
-            font-size: 2.8rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            line-height: 1.15;
-            margin-bottom: 12px;
-        }
-        .section-title .green {
-            color: var(--green);
-        }
-        .section-desc {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            max-width: 540px;
-            line-height: 1.7;
-        }
-        .section-header {
-            margin-bottom: 48px;
-        }
-        .section-header.centered {
+        .service-preview-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border-radius: var(--radius);
+            padding: 28px 24px;
+            border: 1px solid rgba(201, 168, 76, 0.04);
+            transition: var(--transition);
             text-align: center;
         }
-        .section-header.centered .section-desc {
-            margin: 0 auto;
-        }
-
-        /* ===== UPDATED ABOUT / PROFILE ===== */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 50px;
-            align-items: start;
-        }
-        .about-text p {
-            color: var(--text-secondary);
-            margin-bottom: 16px;
-        }
-        .about-text p strong {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-        .profile-highlights {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 20px;
-        }
-        .profile-highlights div {
-            background: var(--green-bg);
-            padding: 10px 16px;
-            border-radius: 12px;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            border: 1px solid rgba(13, 148, 136, 0.06);
-        }
-        .profile-highlights div i {
-            color: var(--green);
-            margin-right: 8px;
-        }
-        .profile-highlights div strong {
-            color: var(--text-primary);
-        }
-
-        .about-details {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 24px;
-        }
-        .about-details div {
-            background: var(--bg-secondary);
-            padding: 12px 18px;
-            border-radius: 12px;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            transition: var(--transition);
-            border: 1px solid transparent;
-        }
-        .about-details div:hover {
-            border-color: var(--border-color);
-            background: #fff;
-        }
-        .about-details div i {
-            color: var(--green);
-            margin-right: 8px;
-            width: 18px;
-        }
-        .about-details div strong {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        .about-visual .hero-avatar {
-            width: 280px;
-            height: 280px;
-        }
-
-        /* ===== CERTIFICATIONS ===== */
-        .cert-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 16px;
-        }
-        .cert-badge {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            padding: 6px 18px;
-            border-radius: 100px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .cert-badge i {
-            color: var(--green);
-        }
-
-        /* ===== SERVICES ===== */
-        .services {
-            background: var(--bg-secondary);
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-        }
-        .service-card {
-            background: #fff;
-            padding: 32px 28px;
-            border-radius: var(--radius);
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
-        .service-card:hover {
+        .service-preview-card:hover {
+            border-color: rgba(201, 168, 76, 0.12);
             transform: translateY(-6px);
-            box-shadow: var(--shadow-hover);
-            border-color: rgba(13, 148, 136, 0.15);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
-        .service-card .icon {
-            font-size: 2.2rem;
-            color: var(--green);
-            margin-bottom: 16px;
-        }
-        .service-card h3 {
-            font-family: var(--font-heading);
-            font-size: 1.2rem;
+        .service-preview-card .icon {
+            font-size: 2rem;
+            color: var(--gold);
             margin-bottom: 10px;
         }
-        .service-card ul {
-            list-style: none;
-        }
-        .service-card ul li {
-            padding: 4px 0;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .service-card ul li::before {
-            content: "✓";
-            color: var(--green);
-            font-weight: 700;
-        }
-
-        /* ===== EXPERIENCE ===== */
-        .experience-list {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-        .exp-item {
-            background: #fff;
-            border-radius: var(--radius);
-            padding: 28px 32px;
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
-        .exp-item:hover {
-            transform: translateX(6px);
-            box-shadow: var(--shadow-hover);
-            border-color: rgba(13, 148, 136, 0.15);
-        }
-        .exp-header {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: baseline;
-            gap: 12px 20px;
-            margin-bottom: 12px;
-        }
-        .exp-header h3 {
-            font-family: var(--font-heading);
-            font-size: 1.2rem;
+        .service-preview-card h4 {
+            font-size: 1rem;
             font-weight: 600;
-        }
-        .exp-header h3 i {
-            color: var(--green);
-            margin-right: 8px;
-        }
-        .exp-company {
-            color: var(--green);
-            font-weight: 500;
-        }
-        .exp-date {
-            color: var(--text-muted);
-            font-size: 0.8rem;
-            margin-left: auto;
-        }
-        .exp-item ul {
-            padding-left: 20px;
-            color: var(--text-secondary);
-        }
-        .exp-item ul li {
+            color: #fff;
             margin-bottom: 4px;
-            font-size: 0.95rem;
+        }
+        .service-preview-card p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 300;
         }
 
-        /* ===== PROJECTS (UPDATED WITH CASE STUDIES) ===== */
-        .projects-grid {
+        /* Featured Case Study */
+        .featured-case {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border-radius: var(--radius);
+            padding: 40px;
+            border: 1px solid rgba(201, 168, 76, 0.04);
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 24px;
+            gap: 40px;
+            align-items: center;
         }
-        .project-card {
-            background: #fff;
-            border-radius: var(--radius);
-            padding: 24px 28px;
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
-        .project-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-hover);
-            border-color: rgba(13, 148, 136, 0.15);
-        }
-        .project-card h3 {
-            font-family: var(--font-heading);
-            font-size: 1.1rem;
-            margin-bottom: 2px;
-        }
-        .project-card h3 i {
-            color: var(--green);
-            margin-right: 6px;
-        }
-        .project-card .project-sub {
-            color: var(--green);
-            font-size: 0.8rem;
-            font-weight: 500;
-            margin-bottom: 10px;
-        }
-        .project-card .problem {
-            background: #fef2f2;
-            padding: 8px 14px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            color: #991b1b;
-            margin-bottom: 10px;
-            border-left: 3px solid #dc2626;
-        }
-        .project-card .solution {
-            background: #f0fdf4;
-            padding: 8px 14px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            color: #166534;
-            margin-bottom: 10px;
-            border-left: 3px solid #22c55e;
-        }
-        .project-card .result {
-            background: #eff6ff;
-            padding: 8px 14px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            color: #1e40af;
-            margin-bottom: 12px;
-            border-left: 3px solid #3b82f6;
-        }
-        .project-card ul {
-            padding-left: 18px;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 14px;
-        }
-        .project-card ul li {
-            margin-bottom: 2px;
-        }
-        .project-tag {
+        .featured-case .case-tag {
             display: inline-block;
-            padding: 3px 14px;
+            padding: 2px 14px;
             border-radius: 100px;
-            background: var(--green-bg);
-            color: var(--green);
-            font-size: 0.7rem;
+            background: rgba(201, 168, 76, 0.06);
+            border: 1px solid rgba(201, 168, 76, 0.08);
+            font-size: 0.65rem;
             font-weight: 600;
+            color: var(--gold-light);
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            margin-bottom: 8px;
         }
-
-        /* ===== TOOLS LOGOS ===== */
-        .tools-section {
-            background: var(--bg-secondary);
-        }
-        .tools-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 16px;
-            margin-top: 20px;
-        }
-        .tool-item {
-            background: #fff;
-            padding: 8px 20px;
-            border-radius: 100px;
-            border: 1px solid var(--border-color);
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: var(--transition);
-        }
-        .tool-item:hover {
-            border-color: var(--green);
-            color: var(--green);
-            transform: translateY(-2px);
-        }
-        .tool-item i {
-            color: var(--green);
-        }
-
-        /* ===== TESTIMONIALS ===== */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-        .testimonial-card {
-            background: #fff;
-            border-radius: var(--radius);
-            padding: 28px;
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
-        .testimonial-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-hover);
-        }
-        .testimonial-card .stars {
-            color: #f59e0b;
-            margin-bottom: 10px;
-        }
-        .testimonial-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            font-style: italic;
-            margin-bottom: 14px;
-        }
-        .testimonial-card cite {
-            font-style: normal;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-        .testimonial-card cite small {
-            display: block;
-            font-weight: 400;
-            color: var(--text-muted);
-            font-size: 0.8rem;
-        }
-
-        /* ===== CONTACT ===== */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 50px;
-        }
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 16px;
-        }
-        .contact-item i {
-            color: var(--green);
-            font-size: 1.1rem;
-            width: 28px;
-            text-align: center;
-        }
-        .contact-item a {
-            color: var(--text-secondary);
-            transition: var(--transition);
-            text-decoration: none;
-        }
-        .contact-item a:hover {
-            color: var(--green);
-        }
-        .social-links {
-            display: flex;
-            gap: 12px;
-            margin-top: 24px;
-            flex-wrap: wrap;
-        }
-        .social-links a {
-            padding: 8px 22px;
-            border-radius: 100px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            text-decoration: none;
-        }
-        .social-links a:hover {
-            border-color: var(--green);
-            color: var(--green);
-            transform: translateY(-2px);
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-        .contact-form input,
-        .contact-form textarea,
-        .contact-form select {
-            padding: 14px 18px;
-            border-radius: 12px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-            font-family: var(--font-body);
-            transition: var(--transition);
-            font-size: 0.95rem;
-        }
-        .contact-form input:focus,
-        .contact-form textarea:focus,
-        .contact-form select:focus {
-            outline: none;
-            border-color: var(--green);
-            box-shadow: 0 0 0 4px var(--green-glow);
-        }
-        .contact-form textarea {
-            resize: vertical;
-        }
-        .contact-form .btn {
-            align-self: flex-start;
-        }
-
-        .whatsapp-btn {
-            background: #25D366;
-            color: #fff !important;
-            padding: 10px 22px;
-            border-radius: 100px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 600;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            font-family: var(--font-body);
-        }
-        .whatsapp-btn:hover {
-            background: #1da851;
-            transform: translateY(-2px);
-            color: #fff !important;
-        }
-
-        /* ===== WHATSAPP FLOATING ===== */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 28px;
-            right: 28px;
-            z-index: 999;
-            background: #25D366;
-            color: #fff;
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .featured-case h3 {
+            font-family: var(--font-heading);
             font-size: 1.8rem;
-            box-shadow: 0 8px 40px rgba(37, 211, 102, 0.35);
-            transition: var(--transition);
-            text-decoration: none;
-        }
-        .whatsapp-float:hover {
-            transform: scale(1.08) translateY(-4px);
-            box-shadow: 0 12px 50px rgba(37, 211, 102, 0.4);
             color: #fff;
+            margin-bottom: 4px;
         }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background: var(--bg-secondary);
-            border-top: 1px solid var(--border-color);
-            padding: 28px 0;
+        .featured-case .case-sub {
+            color: var(--gold-light);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 12px;
         }
-        footer .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-        footer p {
-            color: var(--text-muted);
-            font-size: 0.8rem;
-        }
-        footer p .green-text {
-            color: var(--green);
-            font-weight: 600;
-        }
-        .footer-links {
-            display: flex;
-            gap: 20px;
-        }
-        .footer-links a {
+        .featured-case p {
             color: var(--text-secondary);
-            font-size: 0.8rem;
-            transition: var(--transition);
-            text-decoration: none;
+            font-weight: 300;
         }
-        .footer-links a:hover {
-            color: var(--green);
+        .featured-case .case-result {
+            margin-top: 16px;
+            padding: 16px 20px;
+            background: rgba(201, 168, 76, 0.04);
+            border-radius: 12px;
+            border-left: 3px solid var(--gold);
+        }
+        .featured-case .case-result strong {
+            color: var(--gold-light);
         }
 
-        /* ============================================
-           RESPONSIVE
-           ============================================ */
         @media (max-width: 992px) {
             .hero-grid {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            .hero-text .subtitle {
-                margin: 0 auto 28px;
+            .hero-content .subtitle {
+                margin: 0 auto 32px;
             }
-            .trust-badges {
+            .hero-actions {
                 justify-content: center;
             }
-            .hero-buttons {
-                justify-content: center;
-            }
-            .availability-badge {
+            .hero-stats {
                 justify-content: center;
             }
             .hero-avatar {
@@ -1021,601 +310,170 @@
                 bottom: 2%;
                 left: 2%;
             }
-            .about-grid {
+            .services-preview-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .featured-case {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            .profile-highlights {
-                grid-template-columns: 1fr;
-            }
-            .about-details {
-                grid-template-columns: 1fr;
-            }
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            .testimonials-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            .hero-text h1 {
+            .hero-content h1 {
                 font-size: 3rem;
             }
-            .section-title {
-                font-size: 2.2rem;
-            }
-            .hero-visual {
-                grid-row: 1;
-            }
         }
-
         @media (max-width: 768px) {
-            .nav-links {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: rgba(255, 255, 255, 0.98);
-                backdrop-filter: blur(20px);
-                flex-direction: column;
-                padding: 30px;
-                gap: 18px;
-                border-bottom: 1px solid var(--border-color);
-                transform: translateY(-120%);
-                opacity: 0;
-                transition: var(--transition);
-                pointer-events: none;
+            .hero-content h1 {
+                font-size: 2.5rem;
             }
-            .nav-links.open {
-                transform: translateY(0);
-                opacity: 1;
-                pointer-events: auto;
-            }
-            .hamburger {
-                display: flex;
-            }
-            .hero-text h1 {
-                font-size: 2.2rem;
-            }
-            .section-title {
-                font-size: 1.8rem;
-            }
-            .hero-avatar {
-                width: 200px;
-                height: 200px;
-            }
-            .floating-badge {
-                font-size: 0.7rem;
-                padding: 8px 14px;
-            }
-            .floating-badge--1 {
-                top: -2%;
-                right: 0;
-            }
-            .floating-badge--2 {
-                bottom: -2%;
-                left: 0;
-            }
-            .testimonials-grid {
+            .services-preview-grid {
                 grid-template-columns: 1fr;
             }
-            .btn {
-                padding: 12px 24px;
-                font-size: 0.8rem;
-            }
-            .trust-badges span {
-                font-size: 0.7rem;
-                padding: 4px 12px;
-            }
-            .exp-item {
-                padding: 20px;
-            }
-            .exp-header h3 {
-                font-size: 1rem;
-            }
-            .whatsapp-float {
-                width: 48px;
-                height: 48px;
-                font-size: 1.5rem;
-                bottom: 20px;
-                right: 20px;
-            }
-            .profile-highlights {
-                grid-template-columns: 1fr;
-            }
-            .tools-grid {
-                gap: 10px;
-            }
-            .tool-item {
-                font-size: 0.75rem;
-                padding: 6px 14px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-text h1 {
-                font-size: 1.8rem;
-            }
-            .hero-avatar {
-                width: 160px;
-                height: 160px;
-            }
-            .container {
-                padding: 0 16px;
-            }
-            .floating-badge {
-                display: none;
-            }
-            .hero-buttons .btn {
-                width: 100%;
-                justify-content: center;
-            }
-            .hero-buttons {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .nav-links {
-                gap: 14px;
-                padding: 20px;
-            }
-            .section-title {
-                font-size: 1.5rem;
-            }
-            .cert-grid {
-                justify-content: center;
-            }
-            .cert-badge {
-                font-size: 0.7rem;
-                padding: 4px 12px;
+            .hero-stats {
+                gap: 28px;
             }
         }
     </style>
 </head>
 <body>
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
 
-    <!-- ===== NAVBAR ===== -->
+    <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="container">
-            <a href="#" class="logo">Muhammad<span>Naveed</span></a>
+            <a href="index.html" class="logo">M<span>Naveed</span></a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact" class="nav-cta">Contact</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact</a></li>
             </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <button class="hamburger" id="hamburger">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <!-- ===== HERO SECTION ===== -->
-    <section class="hero" id="home">
-        <div class="container hero-grid">
-            <div class="hero-text">
-                <span class="badge"><i class="fas fa-bolt"></i> Available for Work</span>
-                <h1>
-                    <span class="highlight">SEO Executive</span><br>
-                    for Healthcare &amp; Service Brands
-                </h1>
-                <p class="subtitle">
-                    I help businesses <strong>rank #1 on Google</strong> and get <strong>qualified leads</strong> through
-                    On‑Page, Technical, Off‑Page, and Local SEO. Available for <strong>onsite, remote, or freelance</strong> projects.
-                </p>
-                <div class="trust-badges">
-                    <span><i class="fas fa-check-circle"></i> 5+ Healthcare Projects</span>
-                    <span><i class="fas fa-check-circle"></i> 2000+ High Quality Backlinks</span>
-                    <span><i class="fas fa-check-circle"></i> 150+ Webpages Optimized</span>
-                    <span><i class="fas fa-check-circle"></i> 40% Avg. Traffic Growth</span>
-                </div>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-briefcase"></i> Hire Me for SEO
-                    </a>
-                    <a href="https://wa.me/923094669054?text=Hi%20Naveed%2C%20I%20need%20an%20SEO%20expert%20for%20my%20website.%20Can%20we%20discuss%20your%20services%3F"
-                       target="_blank"
-                       class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> WhatsApp Chat
-                    </a>
-                    <a href="#contact" class="btn btn-download">
-                        <i class="fas fa-file-pdf"></i> Download CV
-                    </a>
-                </div>
-                <div class="availability-badge">
-                    <span class="status-dot"></span>
-                    Open to: <strong>Onsite · Remote · Freelance</strong>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-avatar">
-                    <img src="myphoto.jpeg" alt="Muhammad Naveed - SEO Executive" class="avatar-img" />
-                </div>
-                <div class="floating-badge floating-badge--1">
-                    <i class="fas fa-chart-line green-icon"></i> 40% Growth
-                </div>
-                <div class="floating-badge floating-badge--2">
-                    <i class="fas fa-link green-icon"></i> 2000+ Backlinks
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== ABOUT / PROFILE (UPDATED) ===== -->
-    <section id="about">
+    <!-- Hero -->
+    <section class="hero">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">✦ About Me</span>
-                <h2 class="section-title">Who I <span class="green">Am</span></h2>
-                <p class="section-desc">SEO Executive with experience managing SEO campaigns for multiple US healthcare websites. Passionate about improving organic rankings, increasing website traffic, and implementing data-driven SEO strategies.</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p><strong>I'm Muhammad Naveed</strong>, an SEO Executive based in Lahore, Pakistan. With a Bachelor's degree in Computer Science from Superior University (2022–2026), I combine technical knowledge with creative marketing strategies.</p>
-                    <p>My journey started with a curiosity for how search engines work. Over the years, I've honed my skills in Off‑Page, On‑Page, and Technical SEO, working with healthcare clients like Sahara West Urgent Care, Cleveland Psychiatry Associates, RankMD Pro, The Medicators, and Serenity Choice Health.</p>
-                    <p>I thrive on turning data into action—whether it's climbing SERPs, building high‑quality backlinks, or optimizing Google Business Profiles.</p>
-
-                    <div class="profile-highlights">
-                        <div><i class="fas fa-check-circle"></i> <strong>5+</strong> US Healthcare Websites</div>
-                        <div><i class="fas fa-check-circle"></i> <strong>2000+</strong> High Quality Backlinks</div>
-                        <div><i class="fas fa-check-circle"></i> <strong>150+</strong> Webpages Optimized</div>
-                        <div><i class="fas fa-check-circle"></i> <strong>40%</strong> Avg. Traffic Growth</div>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="badge">✦ SEO Specialist · Lahore, PK</span>
+                    <h1>Helping businesses grow through <span class="highlight">Technical SEO</span> &amp; <span class="highlight">Data‑Driven Strategy</span></h1>
+                    <p class="subtitle">I deliver measurable SEO results — Technical SEO, On‑Page SEO, Off‑Page SEO, Local SEO, and Content Strategy for businesses worldwide.</p>
+                    <div class="hero-actions">
+                        <a href="case-studies.html" class="btn btn-primary"><i class="fas fa-rocket"></i> View Case Studies</a>
+                        <a href="contact.html" class="btn btn-outline"><i class="fas fa-comment"></i> Hire Me</a>
                     </div>
-
-                    <div class="about-details">
-                        <div><i class="fas fa-map-pin"></i> <strong>Location</strong> Lahore, Pakistan</div>
-                        <div><i class="fas fa-graduation-cap"></i> <strong>Education</strong> BS CS (2022–2026)</div>
-                        <div><i class="fas fa-language"></i> <strong>Languages</strong> English, Urdu</div>
-                        <div><i class="fas fa-envelope"></i> <strong>Email</strong> hafizmuhammadnaveedo6@gmail.com</div>
-                    </div>
-
-                    <!-- Certifications -->
-                    <div style="margin-top: 24px;">
-                        <h4 style="font-size: 1rem; margin-bottom: 10px; color: var(--text-primary);"><i class="fas fa-certificate" style="color: var(--green);"></i> Certifications</h4>
-                        <div class="cert-grid">
-                            <span class="cert-badge"><i class="fas fa-check-circle"></i> Google Analytics</span>
-                            <span class="cert-badge"><i class="fas fa-check-circle"></i> Google Search Console</span>
-                            <span class="cert-badge"><i class="fas fa-check-circle"></i> HubSpot SEO</span>
-                            <span class="cert-badge"><i class="fas fa-check-circle"></i> SEMrush SEO</span>
-                        </div>
+                    <div class="hero-stats">
+                        <div class="stat"><h3>700+</h3><p>Backlinks Built</p></div>
+                        <div class="stat"><h3>20+</h3><p>Pages Optimized</p></div>
+                        <div class="stat"><h3>3+</h3><p>SEO Projects</p></div>
                     </div>
                 </div>
-                <div class="about-visual">
+                <div class="hero-visual">
                     <div class="hero-avatar">
-                        <img src="myphoto.jpeg" alt="Muhammad Naveed" class="avatar-img" />
+                        <img src="myphoto.jpg" alt="Muhammad Naveed" class="avatar-img" />
                     </div>
-                    <!-- Portfolio & LinkedIn Links -->
-                    <div style="text-align: center; margin-top: 20px;">
-                        <a href="https://myname-naveed.github.io/Latest-portfolio/" target="_blank" style="display: block; color: var(--green); font-weight: 500; text-decoration: none; margin-bottom: 6px;">
-                            <i class="fas fa-folder-open"></i> Portfolio: myname-naveed.github.io/Latest-portfolio/
-                        </a>
-                        <a href="https://www.linkedin.com/in/hafiz-muhammad-naveed-410291384" target="_blank" style="display: block; color: var(--green); font-weight: 500; text-decoration: none;">
-                            <i class="fab fa-linkedin"></i> LinkedIn: /in/hafiz-muhammad-naveed-410291384
-                        </a>
+                    <div class="floating-badge floating-badge--1">
+                        <span class="dot"></span> Open to opportunities
+                    </div>
+                    <div class="floating-badge floating-badge--2">
+                        <i class="fas fa-chart-line gold-icon"></i> SEO &amp; Analytics
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== SERVICES ===== -->
-    <section id="services" class="services">
+    <!-- Services Preview -->
+    <section class="section-alt">
         <div class="container">
             <div class="section-header centered">
                 <span class="section-label">✦ What I Do</span>
-                <h2 class="section-title">My <span class="green">SEO Services</span></h2>
-                <p class="section-desc">Everything you need to dominate search results and grow your business.</p>
+                <h2 class="section-title">My <span class="gold">SEO Services</span></h2>
+                <p class="section-desc">Complete SEO solutions to help your business rank higher, attract more traffic, and convert leads.</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="icon"><i class="fas fa-file-alt"></i></div>
-                    <h3>On-Page SEO</h3>
-                    <ul>
-                        <li>Keyword Research & Strategy</li>
-                        <li>Meta Tags Optimization</li>
-                        <li>Content Structure & Optimization</li>
-                        <li>Internal Linking</li>
-                        <li>Schema Markup</li>
-                        <li>Keyword Clustering & Topical Maps</li>
-                        <li>EEAT Optimization</li>
-                    </ul>
+            <div class="services-preview-grid">
+                <div class="service-preview-card">
+                    <div class="icon"><i class="fas fa-code"></i></div>
+                    <h4>Technical SEO</h4>
+                    <p>Site speed, indexing, schema, Core Web Vitals</p>
                 </div>
-                <div class="service-card">
-                    <div class="icon"><i class="fas fa-globe"></i></div>
-                    <h3>Off-Page & Local SEO</h3>
-                    <ul>
-                        <li>High-Quality Backlink Building</li>
-                        <li>Guest Posting & Outreach</li>
-                        <li>Business Citations & Directories</li>
-                        <li>Web 2.0 & Cloud Stacks</li>
-                        <li>Competitor Backlink Analysis</li>
-                        <li>Google Business Profile Optimization</li>
-                        <li>Local Citations</li>
-                    </ul>
+                <div class="service-preview-card">
+                    <div class="icon"><i class="fas fa-pen-fancy"></i></div>
+                    <h4>On‑Page SEO</h4>
+                    <p>Meta tags, content, keywords, internal linking</p>
                 </div>
-                <div class="service-card">
-                    <div class="icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Technical SEO</h3>
-                    <ul>
-                        <li>Full SEO Audits</li>
-                        <li>Site Speed & Core Web Vitals</li>
-                        <li>Mobile-Friendliness</li>
-                        <li>Robots.txt & XML Sitemap</li>
-                        <li>Canonical Tags & Redirects (301/302)</li>
-                        <li>Indexing & Crawl Issues</li>
-                        <li>Site Architecture</li>
-                    </ul>
+                <div class="service-preview-card">
+                    <div class="icon"><i class="fas fa-link"></i></div>
+                    <h4>Off‑Page SEO</h4>
+                    <p>Backlinks, citations, guest posting, authority</p>
                 </div>
+                <div class="service-preview-card">
+                    <div class="icon"><i class="fas fa-map-pin"></i></div>
+                    <h4>Local SEO</h4>
+                    <p>Google Business Profile, local citations, reviews</p>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:32px;">
+                <a href="services.html" class="btn btn-outline">View All Services <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- ===== EXPERIENCE ===== -->
-    <section id="experience">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">✦ Career</span>
-                <h2 class="section-title">Professional <span class="green">Experience</span></h2>
-                <p class="section-desc">A track record of delivering SEO wins for diverse clients.</p>
-            </div>
-            <div class="experience-list">
-                <div class="exp-item">
-                    <div class="exp-header">
-                        <h3><i class="fas fa-building"></i>Junior SEO Executive</h3>
-                        <span class="exp-company">Noboxidea</span>
-                        <span class="exp-date"><i class="far fa-calendar"></i> 2023 – Present</span>
-                    </div>
-                    <ul>
-                        <li>Managed SEO for 5+ US healthcare websites including Sahara West Urgent Care, RankMD Pro, The Medicators, Serenity Choice Health, and Cleveland Psychiatry Associates.</li>
-                        <li>Executed On‑Page, Off‑Page, and Technical SEO strategies to boost organic visibility and keyword rankings.</li>
-                        <li>Conducted SEO audits, competitor analysis, and backlink research using GSC, GA4, SEMrush, Ahrefs, and Screaming Frog.</li>
-                        <li>Optimized 150+ webpages and built 2000+ high-quality backlinks.</li>
-                    </ul>
-                </div>
-                <div class="exp-item">
-                    <div class="exp-header">
-                        <h3><i class="fas fa-laptop"></i>SEO Intern</h3>
-                        <span class="exp-company">ViseTech</span>
-                        <span class="exp-date"><i class="far fa-calendar"></i> 2022 – 2023</span>
-                    </div>
-                    <ul>
-                        <li>Assisted in keyword research, content optimisation, and metadata improvements for On‑Page SEO.</li>
-                        <li>Built high‑quality backlinks through citations, directory submissions, guest posting, and profile creation.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== PROJECTS (UPDATED WITH CASE STUDIES) ===== -->
-    <section id="projects" style="background: var(--bg-secondary);">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">✦ Portfolio</span>
-                <h2 class="section-title">Featured <span class="green">Case Studies</span></h2>
-                <p class="section-desc">Real‑world SEO campaigns that delivered tangible results.</p>
-            </div>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <h3><i class="fas fa-hospital"></i>Sahara West Urgent Care</h3>
-                    <div class="project-sub">On‑Page &amp; Off‑Page SEO</div>
-                    <div class="problem"><i class="fas fa-exclamation-circle"></i> <strong>Problem:</strong> Website wasn't ranking for local keywords and had indexing issues.</div>
-                    <div class="solution"><i class="fas fa-check-circle"></i> <strong>What I Did:</strong> Complete On-page SEO, fixed indexing issues, optimized 40+ pages, created internal linking structure, built authority backlinks.</div>
-                    <div class="result"><i class="fas fa-arrow-up"></i> <strong>Result:</strong> Improved indexing, increased keyword rankings, 40% organic traffic growth.</div>
-                    <span class="project-tag"><i class="fas fa-tag"></i> Healthcare</span>
-                </div>
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <h3><i class="fas fa-brain"></i>Cleveland Psychiatry Associates</h3>
-                    <div class="project-sub">Off‑Page SEO &amp; Authority Building</div>
-                    <div class="problem"><i class="fas fa-exclamation-circle"></i> <strong>Problem:</strong> Low domain authority and limited local visibility.</div>
-                    <div class="solution"><i class="fas fa-check-circle"></i> <strong>What I Did:</strong> Keyword research, meta optimization, local citations, guest posting, competitor analysis.</div>
-                    <div class="result"><i class="fas fa-arrow-up"></i> <strong>Result:</strong> Strengthened domain authority, improved local search visibility.</div>
-                    <span class="project-tag"><i class="fas fa-tag"></i> Healthcare</span>
-                </div>
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <h3><i class="fas fa-heart"></i>Serenity Choice Health</h3>
-                    <div class="project-sub">Content &amp; On‑Page Optimisation</div>
-                    <div class="problem"><i class="fas fa-exclamation-circle"></i> <strong>Problem:</strong> Poor content structure and low keyword relevance.</div>
-                    <div class="solution"><i class="fas fa-check-circle"></i> <strong>What I Did:</strong> Optimized website content, metadata, and page structure. Implemented Off‑Page SEO campaigns.</div>
-                    <div class="result"><i class="fas fa-arrow-up"></i> <strong>Result:</strong> Boosted organic visibility and search rankings.</div>
-                    <span class="project-tag"><i class="fas fa-tag"></i> Health &amp; Wellness</span>
-                </div>
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <h3><i class="fas fa-chart-bar"></i>RankmdPro</h3>
-                    <div class="project-sub">Keyword Research &amp; Content Strategy</div>
-                    <div class="problem"><i class="fas fa-exclamation-circle"></i> <strong>Problem:</strong> Low keyword coverage and weak topical authority.</div>
-                    <div class="solution"><i class="fas fa-check-circle"></i> <strong>What I Did:</strong> Optimized pages through meta titles, descriptions, and heading improvements. Enhanced internal linking and content relevance.</div>
-                    <div class="result"><i class="fas fa-arrow-up"></i> <strong>Result:</strong> Increased keyword rankings and improved topical authority.</div>
-                    <span class="project-tag"><i class="fas fa-tag"></i> SEO Tool</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== TOOLS SECTION ===== -->
-    <section class="tools-section">
+    <!-- Featured Case Study -->
+    <section>
         <div class="container">
             <div class="section-header centered">
-                <span class="section-label">✦ Tools I Use</span>
-                <h2 class="section-title">My <span class="green">Toolkit</span></h2>
-                <p class="section-desc">Industry-standard tools for data-driven SEO.</p>
+                <span class="section-label">✦ Proof of Results</span>
+                <h2 class="section-title">Featured <span class="gold">Case Study</span></h2>
+                <p class="section-desc">Real results from a real SEO campaign.</p>
             </div>
-            <div class="tools-grid">
-                <span class="tool-item"><i class="fas fa-chart-simple"></i> Google Analytics 4 (GA4)</span>
-                <span class="tool-item"><i class="fas fa-search"></i> Google Search Console (GSC)</span>
-                <span class="tool-item"><i class="fas fa-chart-pie"></i> SEMrush</span>
-                <span class="tool-item"><i class="fas fa-link"></i> Ahrefs</span>
-                <span class="tool-item"><i class="fas fa-spider"></i> Screaming Frog</span>
-                <span class="tool-item"><i class="fas fa-wordpress"></i> Rank Math</span>
-                <span class="tool-item"><i class="fas fa-location-dot"></i> Google Business Profile</span>
-                <span class="tool-item"><i class="fas fa-database"></i> Google Looker Studio</span>
-                <span class="tool-item"><i class="fas fa-robot"></i> ChatGPT</span>
-                <span class="tool-item"><i class="fas fa-feather"></i> Surfer SEO</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== TESTIMONIALS ===== -->
-    <section id="testimonials">
-        <div class="container">
-            <div class="section-header centered">
-                <span class="section-label">✦ Testimonials</span>
-                <h2 class="section-title">What Clients <span class="green">Say</span></h2>
-                <p class="section-desc">Real feedback from real clients I've worked with.</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>"Naveed improved our organic traffic by 40% in just 2 months. His off-page strategy is solid and he's always available for questions."</p>
-                    <cite>Dr. Sarah Ahmed <small>— Sahara West Urgent Care</small></cite>
+            <div class="featured-case">
+                <div>
+                    <span class="case-tag">🏥 Healthcare</span>
+                    <h3>Sahara West Urgent Care</h3>
+                    <div class="case-sub">On‑Page + Off‑Page SEO</div>
+                    <p>Optimized meta titles, descriptions, heading structure, and keyword placement. Built high‑quality backlinks via citations, directories, and guest posts. Monitored indexing and performance via GSC.</p>
+                    <div class="case-result">
+                        <strong>📈 Results:</strong> Increased organic visibility, improved keyword rankings, and consistent GSC growth.
+                    </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>"Working with Naveed was a game-changer for our practice. He understood our niche and delivered real results within weeks."</p>
-                    <cite>Dr. James Wilson <small>— Cleveland Psychiatry Associates</small></cite>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>"Naveed's technical SEO audit uncovered issues we didn't know existed. His recommendations helped us climb 15 positions in SERPs."</p>
-                    <cite>Michael Chen <small>— RankMD Pro</small></cite>
+                <div>
+                    <p style="color:var(--text-muted);font-size:0.9rem;"><i class="fas fa-check-circle" style="color:var(--gold);"></i> <strong>Challenge:</strong> Low visibility for urgent care keywords.</p>
+                    <p style="color:var(--text-muted);font-size:0.9rem;margin-top:8px;"><i class="fas fa-check-circle" style="color:var(--gold);"></i> <strong>Strategy:</strong> On‑page optimization + targeted backlinks.</p>
+                    <p style="color:var(--text-muted);font-size:0.9rem;margin-top:8px;"><i class="fas fa-check-circle" style="color:var(--gold);"></i> <strong>Implementation:</strong> Meta updates, schema, directory submissions, guest posts.</p>
+                    <p style="color:var(--text-muted);font-size:0.9rem;margin-top:8px;"><i class="fas fa-check-circle" style="color:var(--gold);"></i> <strong>Result:</strong> <span style="color:var(--gold-light);">Top 10 rankings for target keywords.</span></p>
+                    <a href="case-studies.html" class="btn btn-outline" style="margin-top:16px;">View Full Case Study <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
-    <section id="contact" style="background: var(--bg-secondary);">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">✦ Get in Touch</span>
-                <h2 class="section-title">Let's <span class="green">Work Together</span></h2>
-                <p class="section-desc">Have a project in mind or just want to say hi? I'd love to hear from you.</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:hafizmuhammadnaveedo6@gmail.com">hafizmuhammadnaveedo6@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+923094669054">+92 309 4669054</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-pin"></i>
-                        <span>Lahore, Pakistan</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <a href="https://www.linkedin.com/in/hafiz-muhammad-naveed-410291384" target="_blank">linkedin.com/in/hafiz-muhammad-naveed-410291384</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-folder-open"></i>
-                        <a href="https://myname-naveed.github.io/Latest-portfolio/" target="_blank">myname-naveed.github.io/Latest-portfolio/</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <a href="https://wa.me/923094669054?text=Hi%20Naveed%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20connect%20with%20you."
-                           target="_blank"
-                           class="whatsapp-btn">
-                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                        </a>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/hafiz-muhammad-naveed-410291384" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                        <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-                <form class="contact-form" action="#" method="POST">
-                    <input type="text" placeholder="Your Name" required />
-                    <input type="email" placeholder="Your Email" required />
-                    <input type="text" placeholder="Subject" />
-                    <select>
-                        <option value="">I need...</option>
-                        <option value="onsite">Onsite SEO (Lahore)</option>
-                        <option value="remote">Remote SEO</option>
-                        <option value="freelance">Freelance / Project</option>
-                        <option value="audit">SEO Audit</option>
-                        <option value="consultation">Consultation</option>
-                    </select>
-                    <textarea rows="4" placeholder="Message" required></textarea>
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
-                </form>
-            </div>
+    <!-- CTA -->
+    <section class="section-alt" style="padding:60px 0;">
+        <div class="container" style="text-align:center;">
+            <h2 class="section-title" style="font-size:2.2rem;">Ready to grow your <span class="gold">organic traffic</span>?</h2>
+            <p style="color:var(--text-secondary);max-width:500px;margin:8px auto 24px;">Let's discuss how I can help you achieve your SEO goals.</p>
+            <a href="contact.html" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get Started</a>
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 <span class="green-text">Muhammad Naveed</span> · SEO Executive</p>
+            <p>&copy; 2026 <span class="gold-text">Muhammad Naveed</span> · SEO Specialist</p>
             <div class="footer-links">
                 <a href="https://www.linkedin.com/in/hafiz-muhammad-naveed-410291384" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://myname-naveed.github.io/Latest-portfolio/" target="_blank"><i class="fas fa-folder-open"></i> Portfolio</a>
                 <a href="mailto:hafizmuhammadnaveedo6@gmail.com"><i class="fas fa-envelope"></i> Email</a>
             </div>
         </div>
     </footer>
 
-    <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
-    <a href="https://wa.me/923094669054?text=Hi%20Naveed%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20connect%20with%20you."
-       class="whatsapp-float"
-       target="_blank"
-       aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- ===== JAVASCRIPT ===== -->
-    <script>
-        // Navbar scroll
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 60);
-        });
-
-        // Mobile hamburger
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('open');
-        });
-
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('open');
-            });
-        });
-
-        // Active link highlight on scroll
-        const sections = document.querySelectorAll('section[id]');
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 150;
-                if (window.scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
-            navLinks.querySelectorAll('a:not(.nav-cta)').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
