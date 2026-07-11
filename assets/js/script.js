@@ -1,521 +1,295 @@
-/* ============================================
-   CLEAN WHITE + EMERALD GREEN THEME
-   Complete JavaScript for Muhammad Naveed Portfolio
-   Updated: Case Studies, Tools, Certifications
-   ============================================ */
+/**
+ * ============================================
+ * PREMIUM SEO PORTFOLIO - COMPLETE JAVASCRIPT
+ * ============================================
+ */
 
 // ============================================
 // 1. NAVBAR SCROLL EFFECT
 // ============================================
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.getElementById('navbar');
-    if (!navbar) return;
-
-    let lastScroll = 0;
-    const scrollThreshold = 60;
-
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-        
-        // Add/remove scrolled class based on scroll position
-        if (currentScroll > scrollThreshold) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-
-        // Optional: Hide navbar on scroll down, show on scroll up
-        // (Commented out for better UX - keeping navbar always visible)
-        // if (currentScroll > lastScroll && currentScroll > 200) {
-        //     navbar.style.transform = 'translateY(-100%)';
-        // } else {
-        //     navbar.style.transform = 'translateY(0)';
-        // }
-        // lastScroll = currentScroll;
-    });
-})();
+    
+    if (navbar) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 60) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
+});
 
 
 // ============================================
 // 2. MOBILE HAMBURGER MENU
 // ============================================
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
-
-    if (!hamburger || !navLinks) return;
-
-    // Toggle menu on hamburger click
-    hamburger.addEventListener('click', (e) => {
-        e.stopPropagation();
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('open');
-        document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
-    });
-
-    // Close menu when a link is clicked
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('open');
-            document.body.style.overflow = '';
+    
+    if (hamburger && navLinks) {
+        // Toggle menu on hamburger click
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
         });
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (navLinks.classList.contains('open') && 
-            !navLinks.contains(e.target) && 
-            !hamburger.contains(e.target)) {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('open');
-            document.body.style.overflow = '';
-        }
-    });
-
-    // Close menu on escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && navLinks.classList.contains('open')) {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('open');
-            document.body.style.overflow = '';
-        }
-    });
-})();
+        
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('open');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('open');
+            }
+        });
+    }
+});
 
 
 // ============================================
-// 3. ACTIVE NAV LINK HIGHLIGHT ON SCROLL
+// 3. ACTIVE NAV LINK HIGHLIGHT (for single page)
+//    Note: For multi-page, this is handled by .active class in HTML
+//    This function is kept for future use if needed
 // ============================================
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all sections that have an ID
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
     
-    if (!sections.length || !navLinks.length) return;
-
-    // Use Intersection Observer for better performance
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const currentId = entry.target.id;
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${currentId}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
+    // Only run if there are sections (single page mode)
+    if (sections.length > 0 && navLinks.length > 0) {
+        window.addEventListener('scroll', function() {
+            let current = '';
+            
+            sections.forEach(function(section) {
+                const sectionTop = section.offsetTop - 150;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(function(link) {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
         });
-    }, {
-        rootMargin: '-100px 0px -100px 0px',
-        threshold: 0.3
-    });
-
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-})();
+    }
+});
 
 
 // ============================================
 // 4. SMOOTH SCROLL FOR ANCHOR LINKS
+//    (For single page anchor links)
 // ============================================
-(function() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
         anchor.addEventListener('click', function(e) {
-            const targetId = this.getAttribute('href');
-            
-            // Skip if it's just "#" or empty
-            if (targetId === '#' || !targetId) return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (!targetElement) return;
-
-            e.preventDefault();
-
-            // Close mobile menu if open
-            const hamburger = document.getElementById('hamburger');
-            const navLinks = document.getElementById('navLinks');
-            if (hamburger && navLinks) {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('open');
-                document.body.style.overflow = '';
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             }
-
-            const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 80;
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
         });
     });
-})();
+});
 
 
 // ============================================
-// 5. WHATSAPP FLOATING BUTTON - TRACK CLICKS
+// 5. ANIMATED COUNTERS (Optional)
+//    For future use when adding stats animations
 // ============================================
-(function() {
-    const whatsappFloat = document.querySelector('.whatsapp-float');
-    if (!whatsappFloat) return;
-
-    whatsappFloat.addEventListener('click', function(e) {
-        // Track WhatsApp button clicks (for Google Analytics)
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'click', {
-                'event_category': 'WhatsApp',
-                'event_label': 'Floating Button',
-                'value': 1
-            });
-        }
-        console.log('✅ WhatsApp Floating Button Clicked');
-    });
-})();
-
-
-// ============================================
-// 6. CONTACT FORM HANDLING
-// ============================================
-(function() {
-    const contactForm = document.querySelector('.contact-form');
-    if (!contactForm) return;
-
-    // For Netlify Forms (if deployed on Netlify)
-    if (contactForm.getAttribute('data-netlify') === 'true') {
-        console.log('✅ Netlify form detected - will be handled by Netlify');
-        return;
-    }
-
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const name = this.querySelector('input[placeholder*="Name"]')?.value?.trim() || '';
-        const email = this.querySelector('input[placeholder*="Email"]')?.value?.trim() || '';
-        const subject = this.querySelector('input[placeholder*="Subject"]')?.value?.trim() || '';
-        const select = this.querySelector('select')?.value || '';
-        const message = this.querySelector('textarea')?.value?.trim() || '';
-
-        // Validation
-        if (!name || !email || !message) {
-            alert('⚠️ Please fill in all required fields (Name, Email, and Message).');
-            return;
-        }
-
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('⚠️ Please enter a valid email address.');
-            return;
-        }
-
-        // Log form data (for debugging)
-        console.log('📧 Form submitted:', { 
-            name, 
-            email, 
-            subject, 
-            service: select || 'Not specified',
-            message 
-        });
-
-        // Show success message
-        const originalHTML = this.innerHTML;
-        this.innerHTML = `
-            <div style="text-align: center; padding: 50px 20px;">
-                <i class="fas fa-check-circle" style="font-size: 3.5rem; color: #0d9488; margin-bottom: 16px;"></i>
-                <h3 style="color: #0f172a; font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem;">Message Sent! 🎉</h3>
-                <p style="color: #475569; margin: 12px 0 20px;">Thanks for reaching out, ${name}! I'll get back to you within <strong>24 hours</strong>.</p>
-                <button onclick="this.closest('.contact-form').innerHTML = this.closest('.contact-form').dataset.originalHTML" 
-                        style="margin-top: 8px; padding: 12px 32px; border-radius: 100px; background: #0d9488; color: #fff; border: none; cursor: pointer; font-weight: 600; font-size: 0.9rem; transition: all 0.3s;"
-                        onmouseover="this.style.background='#0f766e'"
-                        onmouseout="this.style.background='#0d9488'">
-                    <i class="fas fa-redo"></i> Send Another Message
-                </button>
-            </div>
-        `;
-        this.dataset.originalHTML = originalHTML;
-
-        // Optional: Send to your email via Formspree
-        // Replace the action URL in HTML with: https://formspree.io/your-email
-    });
-})();
-
-
-// ============================================
-// 7. ANIMATED STATS COUNTERS
-// ============================================
-(function() {
-    const counters = document.querySelectorAll('.stat-number[data-count]');
-    if (!counters.length) return;
-
-    let animated = false;
-
-    function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    function animateCounters() {
-        if (animated) return;
-        
-        counters.forEach(counter => {
-            if (!isInViewport(counter) || counter.dataset.animated === 'true') return;
-            
-            counter.dataset.animated = 'true';
-            const target = parseInt(counter.dataset.count);
-            if (!target) return;
-            
-            let current = 0;
-            const duration = 2000;
-            const stepTime = 30;
-            const steps = duration / stepTime;
-            const increment = target / steps;
-
-            const interval = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    counter.textContent = target + (target >= 1000 ? '+' : '');
-                    clearInterval(interval);
-                } else {
-                    counter.textContent = Math.floor(current);
+document.addEventListener('DOMContentLoaded', function() {
+    const counters = document.querySelectorAll('.stat h3, .number');
+    
+    if (counters.length > 0 && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const text = target.textContent;
+                    const num = parseInt(text.replace(/[^0-9]/g, ''));
+                    
+                    if (!isNaN(num)) {
+                        animateCounter(target, num);
+                    }
+                    observer.unobserve(target);
                 }
-            }, stepTime);
-            
-            animated = true;
+            });
+        }, { threshold: 0.5 });
+        
+        counters.forEach(function(counter) {
+            observer.observe(counter);
         });
     }
+});
 
-    // Check on scroll and load
-    window.addEventListener('scroll', animateCounters);
-    window.addEventListener('load', animateCounters);
-    setTimeout(animateCounters, 500);
-})();
-
-
-// ============================================
-// 8. PROJECT CASE STUDY EXPAND (Optional)
-// ============================================
-(function() {
-    // Add click functionality to project cards if needed
-    // Currently just hover effects via CSS, but can add expand functionality
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(card => {
-        card.addEventListener('click', function() {
-            // Optional: Expand/collapse details
-            // Currently just log for analytics
-            const title = this.querySelector('h3')?.textContent?.trim() || 'Unknown Project';
-            console.log(`📂 Project viewed: ${title}`);
-            
-            // Track with Google Analytics if available
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'view_project', {
-                    'event_category': 'Portfolio',
-                    'event_label': title
-                });
-            }
-        });
-    });
-})();
-
-
-// ============================================
-// 9. TOOL ITEMS INTERACTION
-// ============================================
-(function() {
-    const toolItems = document.querySelectorAll('.tool-item');
-    toolItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const toolName = this.textContent?.trim() || 'Unknown Tool';
-            console.log(`🛠️ Tool clicked: ${toolName}`);
-            
-            // Track with Google Analytics if available
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'tool_click', {
-                    'event_category': 'Tools',
-                    'event_label': toolName
-                });
-            }
-        });
-    });
-})();
-
-
-// ============================================
-// 10. PERFORMANCE OPTIMIZATION
-// ============================================
-
-// Debounce function for resize events
-function debounce(func, wait = 250) {
-    let timeout;
-    return function(...args) {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => func.apply(this, args), wait);
-    };
+function animateCounter(element, target) {
+    let current = 0;
+    const increment = Math.ceil(target / 60);
+    const duration = 1500;
+    const stepTime = Math.floor(duration / 60);
+    
+    const timer = setInterval(function() {
+        current += increment;
+        if (current >= target) {
+            element.textContent = target + '+';
+            clearInterval(timer);
+        } else {
+            element.textContent = current + '+';
+        }
+    }, stepTime);
 }
 
-// Handle resize events - close mobile menu on desktop
-window.addEventListener('resize', debounce(() => {
-    if (window.innerWidth > 768) {
+
+// ============================================
+// 6. SCROLL REVEAL ANIMATIONS (Optional)
+//    For fade-in effects on scroll
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    const revealElements = document.querySelectorAll('.service-card, .exp-item, .project-card, .case-card, .skill-tag, .tool-item');
+    
+    if (revealElements.length > 0 && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        revealElements.forEach(function(el) {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    }
+});
+
+
+// ============================================
+// 7. CONTACT FORM VALIDATION
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('.contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const inputs = contactForm.querySelectorAll('input[required], textarea[required]');
+            let isValid = true;
+            
+            inputs.forEach(function(input) {
+                if (input.value.trim() === '') {
+                    isValid = false;
+                    input.style.borderColor = '#e74c3c';
+                    input.style.boxShadow = '0 0 0 3px rgba(231, 76, 60, 0.1)';
+                } else {
+                    input.style.borderColor = '';
+                    input.style.boxShadow = '';
+                }
+            });
+            
+            if (isValid) {
+                // Success message
+                const btn = contactForm.querySelector('.btn');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                btn.disabled = true;
+                
+                // Simulate sending (replace with actual form submission)
+                setTimeout(function() {
+                    btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                    btn.style.background = 'linear-gradient(135deg, #4ade80, #22c55e)';
+                    
+                    setTimeout(function() {
+                        btn.innerHTML = originalText;
+                        btn.style.background = '';
+                        btn.disabled = false;
+                        contactForm.reset();
+                    }, 3000);
+                }, 1500);
+            }
+        });
+    }
+});
+
+
+// ============================================
+// 8. TOOLTIP INITIALIZATION (Optional)
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    // Add title attribute to tool items for better UX
+    document.querySelectorAll('.tool-item').forEach(function(item) {
+        const text = item.textContent.trim();
+        if (text && !item.getAttribute('title')) {
+            item.setAttribute('title', text);
+        }
+    });
+});
+
+
+// ============================================
+// 9. KEYBOARD ACCESSIBILITY
+//    Close menu with Escape key
+// ============================================
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('navLinks');
+        
         if (hamburger && navLinks) {
             hamburger.classList.remove('active');
             navLinks.classList.remove('open');
-            document.body.style.overflow = '';
         }
     }
-}));
-
-
-// ============================================
-// 11. KEYBOARD ACCESSIBILITY
-// ============================================
-document.addEventListener('keydown', function(e) {
-    // Trap focus in mobile menu
-    const navLinks = document.getElementById('navLinks');
-    if (navLinks && navLinks.classList.contains('open')) {
-        const focusable = navLinks.querySelectorAll('a, button');
-        if (focusable.length) {
-            const first = focusable[0];
-            const last = focusable[focusable.length - 1];
-            
-            if (e.key === 'Tab') {
-                if (e.shiftKey && document.activeElement === first) {
-                    e.preventDefault();
-                    last.focus();
-                } else if (!e.shiftKey && document.activeElement === last) {
-                    e.preventDefault();
-                    first.focus();
-                }
-            }
-        }
-    }
-    
-    // Escape key closes mobile menu (already handled above)
 });
 
 
 // ============================================
-// 12. PAGE LOAD INITIALIZATION
+// 10. PAGE LOAD ANIMATION
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('✅ Muhammad Naveed Portfolio Loaded Successfully');
-    console.log('🎨 Theme: Clean White + Emerald Green');
-    console.log('📱 Responsive: Yes');
-    console.log('💬 WhatsApp Integration: Active');
-    console.log('📂 Case Studies: Active');
-    console.log('🛠️ Tools Section: Active');
-    console.log('📜 Certifications: Active');
+    document.body.style.opacity = '0';
+    document.body.style.transition = 'opacity 0.5s ease';
     
-    // Check for any broken images
-    document.querySelectorAll('img').forEach(img => {
-        img.addEventListener('error', function() {
-            console.warn(`⚠️ Image failed to load: ${this.src}`);
-            // Set a fallback color
-            this.style.background = '#e2e8f0';
-            this.alt = 'Image not available';
-        });
-    });
+    setTimeout(function() {
+        document.body.style.opacity = '1';
+    }, 100);
 });
 
 
 // ============================================
-// 13. CONSOLE WELCOME MESSAGE (For Recruiters)
+// 11. CONSOLE WELCOME MESSAGE (Optional)
 // ============================================
-console.log('%c🚀 Muhammad Naveed - SEO Executive', 'font-size: 24px; font-weight: bold; color: #0d9488;');
-console.log('%c🔍 Available for Onsite · Remote · Freelance SEO Roles', 'font-size: 14px; color: #475569;');
-console.log('%c📧 hafizmuhammadnaveedo6@gmail.com', 'font-size: 14px; color: #94a3b8;');
-console.log('%c💬 WhatsApp: +92 309 4669054', 'font-size: 14px; color: #94a3b8;');
-console.log('%c🌐 Portfolio: https://myname-naveed.github.io/Latest-portfolio/', 'font-size: 14px; color: #94a3b8;');
-console.log('%c🔗 LinkedIn: https://www.linkedin.com/in/hafiz-muhammad-naveed-410291384', 'font-size: 14px; color: #94a3b8;');
-console.log('%c📊 2000+ Backlinks | 150+ Pages Optimized | 40% Avg. Growth', 'font-size: 14px; color: #0d9488;');
+console.log('%c🚀 Muhammad Naveed · SEO Specialist Portfolio', 'font-size:20px; font-weight:bold; color:#c9a84c;');
+console.log('%c📧 hafizmuhammadnaveedo6@gmail.com', 'font-size:12px; color:#6f6580;');
 
 
 // ============================================
-// 14. SMOOTH SCROLL FOR DOWNLOAD CV BUTTON
+// 12. PREVENT DEFAULT FOR EMPTY LINKS
 // ============================================
-(function() {
-    const downloadBtn = document.querySelector('.btn-download');
-    if (downloadBtn) {
-        downloadBtn.addEventListener('click', function(e) {
-            // Track download button click
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'download_cv', {
-                    'event_category': 'Resume',
-                    'event_label': 'CV Download'
-                });
-            }
-            console.log('📄 CV Download button clicked');
-            // The href already points to #contact, so smooth scroll will work
-        });
-    }
-})();
-
-
-// ============================================
-// 15. CERTIFICATION BADGE INTERACTION
-// ============================================
-(function() {
-    const certBadges = document.querySelectorAll('.cert-badge');
-    certBadges.forEach(badge => {
-        badge.addEventListener('click', function() {
-            const certName = this.textContent?.trim() || 'Unknown Certification';
-            console.log(`📜 Certification viewed: ${certName}`);
-            
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'view_certification', {
-                    'event_category': 'Certifications',
-                    'event_label': certName
-                });
-            }
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href="#"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
         });
     });
-})();
-
-
-// ============================================
-// 16. TESTIMONIAL CARDS INTERACTION
-// ============================================
-(function() {
-    const testimonialCards = document.querySelectorAll('.testimonial-card');
-    testimonialCards.forEach(card => {
-        card.addEventListener('click', function() {
-            const author = this.querySelector('cite')?.textContent?.trim() || 'Unknown Client';
-            console.log(`⭐ Testimonial viewed: ${author}`);
-            
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'view_testimonial', {
-                    'event_category': 'Testimonials',
-                    'event_label': author
-                });
-            }
-        });
-    });
-})();
-
-
-// ============================================
-// 17. SERVICE CARD INTERACTION
-// ============================================
-(function() {
-    const serviceCards = document.querySelectorAll('.service-card');
-    serviceCards.forEach(card => {
-        card.addEventListener('click', function() {
-            const serviceName = this.querySelector('h3')?.textContent?.trim() || 'Unknown Service';
-            console.log(`💼 Service viewed: ${serviceName}`);
-            
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'view_service', {
-                    'event_category': 'Services',
-                    'event_label': serviceName
-                });
-            }
-        });
-    });
-})();
+});
